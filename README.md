@@ -105,12 +105,8 @@ Converts a dynamic value to a DateTime object.
 dynamicValue.forceDateTime
 ```
 
-Note: If the conversion fails, an exception will be thrown.
-
 That's it! You can now use the `force_type` package to forcefully convert dynamic types to specific types in your Flutter project.
 
-Remember to run the tests using `flutter test` command to verify the behavior of your code.
-
 I hope this documentation helps! Let me know if you need any further assistance.
-```
+
 
