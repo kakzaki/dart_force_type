@@ -1,6 +1,6 @@
 ## Force Type
 
-A Flutter package that provides functions to forcefully convert dynamic types to specific types.
+A Dart package that provides functions to forcefully convert dynamic types to specific types.
 
 [![pub package](https://img.shields.io/pub/v/force_type.svg)](https://pub.dev/packages/force_type)
 [![pub package](https://img.shields.io/twitter/follow/kakzaki_id.svg?colorA=1da1f2&colorB=&label=Follow%20on%20Twitter)](https://twitter.com/kakzaki_id)
