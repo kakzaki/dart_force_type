@@ -240,26 +240,24 @@ extension NullableDateTimeCasting on DateTime? {
           : false;
 }
 
-class ForceType {
-  /// forcing dynamic type to String
-  String forceString(var value) => "${value ?? ""}";
+/// forcing dynamic type to String
+String forceString(var value) => "${value ?? ""}";
 
-  /// forcing dynamic type to Integer
-  int forceInteger(var value) =>
-      int.tryParse("${value ?? "0"}".replaceAll(".", "").replaceAll(",", "")) ??
-      0;
+/// forcing dynamic type to Integer
+int forceInteger(var value) =>
+    int.tryParse("${value ?? "0"}".replaceAll(".", "").replaceAll(",", "")) ??
+    0;
 
-  /// forcing dynamic type to DateTime
-  DateTime forceDateTime(var value) =>
-      DateTime.tryParse("${value ?? DateTime.now()}") ?? DateTime.now();
+/// forcing dynamic type to DateTime
+DateTime forceDateTime(var value) =>
+    DateTime.tryParse("${value ?? DateTime.now()}") ?? DateTime.now();
 
-  /// forcing dynamic type to Double
-  double forceDouble(var value) =>
-      double.tryParse("${value ?? "0"}".replaceAll(",", ".")) ?? 0;
+/// forcing dynamic type to Double
+double forceDouble(var value) =>
+    double.tryParse("${value ?? "0"}".replaceAll(",", ".")) ?? 0;
 
-  /// forcing dynamic type to Boolean
-  bool forceBoolean(var value) =>
-      "${value ?? ""}" != '1' || "${value ?? ""}".toLowerCase() != 'true'
-          ? true
-          : false;
-}
+/// forcing dynamic type to Boolean
+bool forceBoolean(var value) =>
+    "${value ?? ""}" != '1' || "${value ?? ""}".toLowerCase() != 'true'
+        ? true
+        : false;
