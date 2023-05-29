@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Add other type.
+
 ## 1.0.1
 
 - Add other type.
