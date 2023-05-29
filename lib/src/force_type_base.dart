@@ -45,6 +45,29 @@ extension StringCasting on String {
       (this) != '1' || (this).toLowerCase() != 'true' ? true : false;
 }
 
+extension NullableStringCasting on String? {
+  /// forcing String? type to String
+  String get forceString => this ?? "";
+
+  /// forcing String? type to Integer
+  int get forceInteger =>
+      int.tryParse((this ?? "0").replaceAll(".", "").replaceAll(",", "")) ?? 0;
+
+  /// forcing String? type to DateTime
+  DateTime get forceDateTime =>
+      DateTime.tryParse("${this ?? DateTime.now()}") ?? DateTime.now();
+
+  /// forcing String? type to Double
+  double get forceDouble =>
+      double.tryParse((this ?? "0").replaceAll(",", ".")) ?? 0;
+
+  /// forcing String? type to Boolean
+  bool get forceBoolean =>
+      (this ?? "") != '1' || (this ?? "").toLowerCase() != 'true'
+          ? true
+          : false;
+}
+
 extension IntegerCasting on int {
   /// forcing Integer type to String
   String get forceString => "$this";
@@ -62,6 +85,30 @@ extension IntegerCasting on int {
   /// forcing Integer type to Boolean
   bool get forceBoolean =>
       "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
+}
+
+extension NullableIntegerCasting on int? {
+  /// forcing NullableInteger type to String
+  String get forceString => "${this ?? ""}";
+
+  /// forcing NullableInteger type to Integer
+  int get forceInteger =>
+      int.tryParse("${this ?? "0"}".replaceAll(".", "").replaceAll(",", "")) ??
+      0;
+
+  /// forcing NullableInteger type to DateTime
+  DateTime get forceDateTime =>
+      DateTime.tryParse("${this ?? DateTime.now()}") ?? DateTime.now();
+
+  /// forcing NullableInteger type to Double
+  double get forceDouble =>
+      double.tryParse("${this ?? "0"}".replaceAll(",", ".")) ?? 0;
+
+  /// forcing NullableInteger type to Boolean
+  bool get forceBoolean =>
+      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+          ? true
+          : false;
 }
 
 extension DoubleCasting on double {
@@ -83,6 +130,30 @@ extension DoubleCasting on double {
       "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
 }
 
+extension NullableDoubleCasting on double? {
+  /// forcing NullableDouble type to String
+  String get forceString => "${this ?? ""}";
+
+  /// forcing NullableDouble type to Integer
+  int get forceInteger =>
+      int.tryParse("${this ?? "0"}".replaceAll(".", "").replaceAll(",", "")) ??
+      0;
+
+  /// forcing NullableDouble type to DateTime
+  DateTime get forceDateTime =>
+      DateTime.tryParse("${this ?? DateTime.now()}") ?? DateTime.now();
+
+  /// forcing NullableDouble type to Double
+  double get forceDouble =>
+      double.tryParse("${this ?? "0"}".replaceAll(",", ".")) ?? 0;
+
+  /// forcing NullableDouble type to Boolean
+  bool get forceBoolean =>
+      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+          ? true
+          : false;
+}
+
 extension BooleanCasting on bool {
   /// forcing Boolean type to String
   String get forceString => "$this";
@@ -102,6 +173,30 @@ extension BooleanCasting on bool {
       "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
 }
 
+extension NullableBooleanCasting on bool? {
+  /// forcing NullableBoolean type to String
+  String get forceString => "${this ?? ""}";
+
+  /// forcing NullableBoolean type to Integer
+  int get forceInteger =>
+      int.tryParse("${this ?? "0"}".replaceAll(".", "").replaceAll(",", "")) ??
+      0;
+
+  /// forcing NullableBoolean type to DateTime
+  DateTime get forceDateTime =>
+      DateTime.tryParse("${this ?? DateTime.now()}") ?? DateTime.now();
+
+  /// forcing NullableBoolean type to Double
+  double get forceDouble =>
+      double.tryParse("${this ?? "0"}".replaceAll(",", ".")) ?? 0;
+
+  /// forcing NullableBoolean type to Boolean
+  bool get forceBoolean =>
+      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+          ? true
+          : false;
+}
+
 extension DateTimeCasting on DateTime {
   /// forcing DateTime type to String
   String get forceString => "$this";
@@ -119,6 +214,30 @@ extension DateTimeCasting on DateTime {
   /// forcing DateTime type to Boolean
   bool get forceBoolean =>
       "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
+}
+
+extension NullableDateTimeCasting on DateTime? {
+  /// forcing NullableDateTime type to String
+  String get forceString => "${this ?? ""}";
+
+  /// forcing NullableDateTime type to Integer
+  int get forceInteger =>
+      int.tryParse("${this ?? "0"}".replaceAll(".", "").replaceAll(",", "")) ??
+      0;
+
+  /// forcing NullableDateTime to DateTime
+  DateTime get forceDateTime =>
+      DateTime.tryParse("${this ?? DateTime.now()}") ?? DateTime.now();
+
+  /// forcing NullableDateTime type to Double
+  double get forceDouble =>
+      double.tryParse("${this ?? "0"}".replaceAll(",", ".")) ?? 0;
+
+  /// forcing NullableDateTime type to Boolean
+  bool get forceBoolean =>
+      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+          ? true
+          : false;
 }
 
 class ForceType {
