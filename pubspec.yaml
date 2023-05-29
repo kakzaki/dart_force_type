@@ -1,6 +1,6 @@
 name: force_type
 description: A Dart package that provides functions to forcefully convert dynamic types to specific types.
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/kakzaki/dart_force_type
 
 environment:
