@@ -87,6 +87,8 @@ Converts a dynamic value to an integer.
 
 ```dart
 dynamicValue.forceInteger
+//or
+forceInteger(dynamicValue)
 ```
 
 ### forceDouble
@@ -95,6 +97,8 @@ Converts a dynamic value to a double.
 
 ```dart
 dynamicValue.forceDouble
+//or
+forceDouble(dynamicValue)
 ```
 
 ### forceBoolean
@@ -103,6 +107,8 @@ Converts a dynamic value to a boolean.
 
 ```dart
 dynamicValue.forceBoolean
+//or
+forceBoolean(dynamicValue)
 ```
 
 ### forceDateTime
@@ -111,6 +117,8 @@ Converts a dynamic value to a DateTime object.
 
 ```dart
 dynamicValue.forceDateTime
+//or
+forceDateTime(dynamicValue)
 ```
 
 That's it! You can now use the `force_type` package to forcefully convert dynamic types to specific types in your Flutter project.
