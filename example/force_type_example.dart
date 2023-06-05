@@ -12,23 +12,34 @@ void main() {
 
     test('Force String Test', () {
       expect(dynamicA.forceString, "123");
+      //or
+      expect(forceString(dynamicA), "123");
     });
 
     test('Force Integer Test', () {
       expect(dynamicB.forceInteger, 123);
+      //or
+      expect(forceInteger(dynamicB), 123);
     });
 
     test('Force Double Test', () {
       expect(dynamicC.forceDouble, 123.456);
+      //or
+      expect(forceDouble(dynamicC), 123.456);
     });
 
     test('Force Boolean Test', () {
       expect(dynamicD.forceBoolean, true);
       expect(dynamicE.forceBoolean, true);
+      //or
+      expect(forceBoolean(dynamicD), true);
+      expect(forceBoolean(dynamicE), true);
     });
 
     test('Force DateTime Test', () {
       expect(dynamicF.forceDateTime, DateTime.parse("1969-07-20 20:18:04Z"));
+      //or
+      expect(forceDateTime(dynamicF), DateTime.parse("1969-07-20 20:18:04Z"));
     });
   });
 }

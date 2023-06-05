@@ -29,7 +29,6 @@ Create a group of tests using the `group` function from the `test` package:
 ```dart
 void main() {
   group('A group of tests', () {
-    // Define dynamic variables for testing
     final dynamicA = 123;
     final dynamicB = "123";
     final dynamicC = "123.456";
@@ -37,27 +36,36 @@ void main() {
     final dynamicE = "1";
     final dynamicF = "1969-07-20 20:18:04Z";
 
-    // Write individual test cases
     test('Force String Test', () {
       expect(dynamicA.forceString, "123");
+      //or
+      expect(forceString(dynamicA), "123");
     });
 
     test('Force Integer Test', () {
       expect(dynamicB.forceInteger, 123);
+      //or
+      expect(forceInteger(dynamicB), 123);
     });
 
     test('Force Double Test', () {
       expect(dynamicC.forceDouble, 123.456);
+      //or
+      expect(forceDouble(dynamicC), 123.456);
     });
 
     test('Force Boolean Test', () {
       expect(dynamicD.forceBoolean, true);
       expect(dynamicE.forceBoolean, true);
+      //or
+      expect(forceBoolean(dynamicD), true);
+      expect(forceBoolean(dynamicE), true);
     });
 
     test('Force DateTime Test', () {
-      expect(
-          dynamicF.forceDateTime, DateTime.parse("1969-07-20 20:18:04Z"));
+      expect(dynamicF.forceDateTime, DateTime.parse("1969-07-20 20:18:04Z"));
+      //or
+      expect(forceDateTime(dynamicF), DateTime.parse("1969-07-20 20:18:04Z"));
     });
   });
 }
