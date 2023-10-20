@@ -35,6 +35,7 @@ void main() {
     test('Force Boolean Test', () {
       expect(dynamicD.forceBoolean, true);
       expect(dynamicE.forceBoolean, true);
+      expect(dynamicB.forceBoolean, false);
       //or
       expect(forceBoolean(dynamicD), true);
       expect(forceBoolean(dynamicE), true);
