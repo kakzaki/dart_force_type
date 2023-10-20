@@ -1,3 +1,7 @@
+## 1.0.7
+
+- Fix forceBoolean logic
+
 ## 1.0.6
 
 - Add function mode.
