@@ -21,7 +21,7 @@ extension DynamicCasting on dynamic {
 
   /// forcing dynamic type to Boolean
   bool get forceBoolean =>
-      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+      "${this ?? ""}" == '1' || "${this ?? ""}".toLowerCase() == 'true'
           ? true
           : false;
 }
@@ -42,7 +42,7 @@ extension StringCasting on String {
 
   /// forcing String type to Boolean
   bool get forceBoolean =>
-      (this) != '1' || (this).toLowerCase() != 'true' ? true : false;
+      (this) == '1' || (this).toLowerCase() == 'true' ? true : false;
 }
 
 extension NullableStringCasting on String? {
@@ -63,7 +63,7 @@ extension NullableStringCasting on String? {
 
   /// forcing String? type to Boolean
   bool get forceBoolean =>
-      (this ?? "") != '1' || (this ?? "").toLowerCase() != 'true'
+      (this ?? "") == '1' || (this ?? "").toLowerCase() == 'true'
           ? true
           : false;
 }
@@ -84,7 +84,7 @@ extension IntegerCasting on int {
 
   /// forcing Integer type to Boolean
   bool get forceBoolean =>
-      "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
+      "$this" == '1' || "$this".toLowerCase() == 'true' ? true : false;
 }
 
 extension NullableIntegerCasting on int? {
@@ -106,7 +106,7 @@ extension NullableIntegerCasting on int? {
 
   /// forcing NullableInteger type to Boolean
   bool get forceBoolean =>
-      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+      "${this ?? ""}" == '1' || "${this ?? ""}".toLowerCase() == 'true'
           ? true
           : false;
 }
@@ -127,7 +127,7 @@ extension DoubleCasting on double {
 
   /// forcing Double type to Boolean
   bool get forceBoolean =>
-      "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
+      "$this" == '1' || "$this".toLowerCase() == 'true' ? true : false;
 }
 
 extension NullableDoubleCasting on double? {
@@ -149,7 +149,7 @@ extension NullableDoubleCasting on double? {
 
   /// forcing NullableDouble type to Boolean
   bool get forceBoolean =>
-      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+      "${this ?? ""}" == '1' || "${this ?? ""}".toLowerCase() == 'true'
           ? true
           : false;
 }
@@ -170,7 +170,7 @@ extension BooleanCasting on bool {
 
   /// forcing Boolean type to Boolean
   bool get forceBoolean =>
-      "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
+      "$this" == '1' || "$this".toLowerCase() == 'true' ? true : false;
 }
 
 extension NullableBooleanCasting on bool? {
@@ -192,7 +192,7 @@ extension NullableBooleanCasting on bool? {
 
   /// forcing NullableBoolean type to Boolean
   bool get forceBoolean =>
-      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+      "${this ?? ""}" == '1' || "${this ?? ""}".toLowerCase() == 'true'
           ? true
           : false;
 }
@@ -213,7 +213,7 @@ extension DateTimeCasting on DateTime {
 
   /// forcing DateTime type to Boolean
   bool get forceBoolean =>
-      "$this" != '1' || "$this".toLowerCase() != 'true' ? true : false;
+      "$this" == '1' || "$this".toLowerCase() == 'true' ? true : false;
 }
 
 extension NullableDateTimeCasting on DateTime? {
@@ -235,7 +235,7 @@ extension NullableDateTimeCasting on DateTime? {
 
   /// forcing NullableDateTime type to Boolean
   bool get forceBoolean =>
-      "${this ?? ""}" != '1' || "${this ?? ""}".toLowerCase() != 'true'
+      "${this ?? ""}" == '1' || "${this ?? ""}".toLowerCase() == 'true'
           ? true
           : false;
 }
@@ -258,6 +258,6 @@ double forceDouble(var value) =>
 
 /// forcing dynamic type to Boolean
 bool forceBoolean(var value) =>
-    "${value ?? ""}" != '1' || "${value ?? ""}".toLowerCase() != 'true'
+    "${value ?? ""}" == '1' || "${value ?? ""}".toLowerCase() == 'true'
         ? true
         : false;
