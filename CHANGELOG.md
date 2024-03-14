@@ -1,3 +1,11 @@
+## 1.0.9
+
+- Fix double and integer format
+
+## 1.0.8
+
+- Remove dynamic extension: not possible when null
+
 ## 1.0.7
 
 - Fix forceBoolean logic

@@ -7,44 +7,57 @@ import 'package:test/test.dart';
 
 void main() {
   group('A group of tests', () {
-    final dynamicA = 123;
-    final dynamicB = "123";
-    final dynamicC = "123.456";
-    final dynamicD = "true";
-    final dynamicE = "1";
-    final dynamicF = "1969-07-20 20:18:04Z";
+    final integerVal = 123;
+    final stringIntegerVal = "123";
+    final stringDoubleVal = "123.456";
+    final stringBooleanVal = "true";
+    final stringBooleanIntegerVal = "1";
+    final stringDateTime = "1969-07-20 20:18:04Z";
+    final Map<String, dynamic> json = {"value": null};
+    final double doubleVal = 123.00;
 
     test('Force String Test', () {
-      expect(dynamicA.forceString, "123");
-      //or
-      expect(forceString(dynamicA), "123");
+      expect(integerVal.forceString, "123");
+      expect(forceString(integerVal), "123");
     });
 
     test('Force Integer Test', () {
-      expect(dynamicB.forceInteger, 123);
-      //or
-      expect(forceInteger(dynamicB), 123);
+      expect(stringIntegerVal.forceInteger, 123);
+      expect(forceInteger(stringIntegerVal), 123);
     });
 
     test('Force Double Test', () {
-      expect(dynamicC.forceDouble, 123.456);
-      //or
-      expect(forceDouble(dynamicC), 123.456);
+      expect(stringDoubleVal.forceDouble, 123.456);
+      expect(forceDouble(stringDoubleVal), 123.456);
     });
 
     test('Force Boolean Test', () {
-      expect(dynamicD.forceBoolean, true);
-      expect(dynamicE.forceBoolean, true);
-      expect(dynamicB.forceBoolean, false);
-      //or
-      expect(forceBoolean(dynamicD), true);
-      expect(forceBoolean(dynamicE), true);
+      expect(stringBooleanVal.forceBoolean, true);
+      expect(stringBooleanIntegerVal.forceBoolean, true);
+      expect(stringIntegerVal.forceBoolean, false);
+      expect(forceBoolean(stringBooleanVal), true);
+      expect(forceBoolean(stringBooleanIntegerVal), true);
     });
 
     test('Force DateTime Test', () {
-      expect(dynamicF.forceDateTime, DateTime.parse("1969-07-20 20:18:04Z"));
-      //or
-      expect(forceDateTime(dynamicF), DateTime.parse("1969-07-20 20:18:04Z"));
+      expect(
+          stringDateTime.forceDateTime, DateTime.parse("1969-07-20 20:18:04Z"));
+      expect(forceDateTime(stringDateTime),
+          DateTime.parse("1969-07-20 20:18:04Z"));
+    });
+
+    test('Force String Object Test', () {
+      expect(forceString(json['value']), "");
+    });
+
+    test('Force Double to Integer Test', () {
+      expect(doubleVal.forceInteger, 123);
+      expect(forceInteger(doubleVal), 123);
+    });
+
+    test('Force String Double to Double Test', () {
+      expect(stringDoubleVal.forceDouble, 123.456);
+      expect(forceDouble(stringDoubleVal), 123.456);
     });
   });
 }
