@@ -1,3 +1,7 @@
+## 1.0.10
+
+- object format
+
 ## 1.0.9
 
 - Fix double and integer format

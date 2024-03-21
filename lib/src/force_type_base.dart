@@ -2,6 +2,27 @@
 //
 // Copyright (c) 2023 Zaki Mubarok (kakzaki.dev)
 
+extension NullableObjectCasting on Object? {
+  /// forcing Object? type to String
+  String get forceString => "${this ?? ""}";
+
+  /// forcing Object? type to Integer
+  int get forceInteger => int.tryParse("${this ?? "0"}") ?? 0;
+
+  /// forcing Object? type to DateTime
+  DateTime get forceDateTime =>
+      DateTime.tryParse("${this ?? DateTime.now()}") ?? DateTime.now();
+
+  /// forcing Object? type to Double
+  double get forceDouble => double.tryParse("${this ?? "0"}") ?? 0;
+
+  /// forcing Object? type to Boolean
+  bool get forceBoolean =>
+      "${this ?? ""}" == '1' || ("${this ?? ""}").toLowerCase() == 'true'
+          ? true
+          : false;
+}
+
 extension StringCasting on String {
   /// forcing String type to String
   String get forceString => this;
